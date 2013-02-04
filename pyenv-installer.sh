@@ -1,7 +1,7 @@
-﻿#!/bin/bash
+#!/bin/bash
 
-#author:	孙松
-#date:	02-04-2013
+#author: 孙松
+#date: 02-04-2013
 #
 # README
 # This script is aimed at help building a python developing environment using Django, MySQL, redis, PostgreSQL. Heroku, Version control systems like git and svn, openvpn client, virtualenv and common libraries for python are also included. This script were tested under ubuntu 12.04.
