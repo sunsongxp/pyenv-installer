@@ -23,6 +23,9 @@ sudo sh <<SCRIPT
 
 	#traditional gnome
 	apt-get -y install gnome-session-fallback
+	
+	#open terminal in nautilus
+	apt-get -y install nautilus-open-terminal
 
 	#install python-setuptools
 	apt-get -y install python-setuptools
@@ -44,6 +47,7 @@ sudo sh <<SCRIPT
 	#install databases
 	apt-get -y install postgresql postgresql-server-dev-9.1
 	apt-get -y build-dep python-mysqldb
+	apt-get -y install sqlite3
 
 	#install python-dev
 	apt-get -y install python-dev
@@ -83,6 +87,7 @@ tar xvzf $redis_file_name
 cd redis-stable
 make
 make test
+#sudo make install
 #Setup commands needed to be run as sudo
 #cd utils
 #sudo ./install_server.sh
@@ -112,3 +117,6 @@ pip install gunicorn
 #install numpy and matplotlib
 pip install numpy
 pip install matplotlib 
+
+#BeautifulSoup is for parsing html
+pip install BeautifulSoup
