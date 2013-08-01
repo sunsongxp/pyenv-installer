@@ -96,12 +96,16 @@ RedisLive_url="https://github.com/kumarnitin/RedisLive.git"
 pip install tornado python-dateutil argparse
 git clone $RedisLive_url
 
-#install Gunicorn
+# Install Gunicorn
 pip install gunicorn
 
-#install numpy and matplotlib
+# Install numpy and matplotlib
 pip install numpy
-pip install matplotlib 
+pip install matplotlib
 
-#BeautifulSoup is for parsing html
+# BeautifulSoup is for parsing html
 pip install BeautifulSoup
+
+# fabric for deployment, pytz handles timezone, xlwt render xls spreadsheet
+# South for migration
+pip install fabric pytz xlwt South
