@@ -53,7 +53,7 @@ sudo sh <<SCRIPT
     apt-get -y install python-pip 
 
     # Install virtualenv
-    apt-get -y Install python-virtualenv
+    apt-get -y install python-virtualenv
 
 SCRIPT
 
