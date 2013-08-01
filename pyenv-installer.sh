@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#author: 孙松
-#date: 02-04-2013
+# Author: 孙松
+# Date: 08-01-2013
 #
 # README
 # This script is aimed at help building a python developing environment using Django, MySQL, redis, PostgreSQL. Heroku, Version control systems like git and svn, openvpn client, virtualenv and common libraries for python are also included. This script were tested under ubuntu 12.04.
@@ -12,92 +12,77 @@
 # Step 5: go to the workspace directory, and run "source venv/bin/activate", then run python as you like.
 #
 
-#clear previous sudo permission
+# Clear previous sudo permission
 sudo -k
 
 #run with sudo
 sudo sh <<SCRIPT
-	#Update, You can Do it yourself before running this script.
-	apt-get update
-	apt-get -y upgrade
+    # Update, You can Do it yourself before running this script.
+    apt-get update
+    apt-get -y upgrade
 
-	#traditional gnome
-	apt-get -y install gnome-session-fallback
-	
-	#open terminal in nautilus
-	apt-get -y install nautilus-open-terminal
 
-	#install python-setuptools
-	apt-get -y install python-setuptools
+    # Basic Tools
+    apt-get -y install ssh vim tmux tilda ack-grep ipython traceroute tsocks
 
-	#Install version control systems & other tools
-	apt-get -y install vim git git-cola ssh subversion
+    # Version Control System
+    apt-get -y install git git-cola subversion
 
-	#Install openvpn client
-	apt-get -y install network-manager-openvpn-gnome
+    # For monitoring (sysstat is running as command "iostat")
+    apt-get -y install htop iotop sysstat iptraf iftop
 
-	#Java
-	#add-apt-repository ppa:webupd8team/java
-	#apt-get update
-	#apt-get -y install oracle-java7-install
+    # Source Building and Compiling
+    apt-get -y install build-essential
 
-	#Install build system
-	apt-get -y install build-essential
+    # Install databases
+    apt-get -y install postgresql postgresql-server-dev-9.1
+    # build-dep means that install all dependencies for 'packagename' so that I can build it.
+    apt-get -y build-dep python-mysqldb
+    apt-get -y install sqlite3
 
-	#install databases
-	apt-get -y install postgresql postgresql-server-dev-9.1
-	apt-get -y build-dep python-mysqldb
-	apt-get -y install sqlite3
+    # Install python-setuptools
+    apt-get -y install python-setuptools
 
-	#install python-dev
-	apt-get -y install python-dev
-	
-	#matplotlib needs those libraries (also needs python-dev)
-	apt-get -y install libfreetype6-dev libpng-dev
+    # Install python-dev
+    apt-get -y install python-dev
 
-	#Install pip 
-	apt-get -y install python-pip 
+    # Matplotlib needs those libraries (also needs python-dev)
+    apt-get -y install libfreetype6-dev libpng-dev
 
-	#install virtualenv
-	pip install virtualenv
+    # Install pip 
+    apt-get -y install python-pip 
 
-	#Install Heroku
-	#from https://toolbelt.heroku.com/install-ubuntu.sh
-
-	# add heroku repository to apt
-	echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
-
-	# install heroku's release key for package verification
-	wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
-
-	# update your sources
-	apt-get update
-
-	# install the toolbelt
-	apt-get install -y heroku-toolbelt
+    # Install virtualenv
+    apt-get -y Install python-virtualenv
 
 SCRIPT
 
 redis_url="http://download.redis.io/redis-stable.tar.gz"
 redis_file_name="redis-stable.tar.gz"
 
-#install redis-server
+########################
+# Install redis-server
+########################
 wget $redis_url
 tar xvzf $redis_file_name
 cd redis-stable
 make
 make test
-#sudo make install
+sudo make install
 #Setup commands needed to be run as sudo
-#cd utils
-#sudo ./install_server.sh
+cd utils
+sudo ./install_server.sh
 #Then use "service" to start redis-server
 
+
+##############################
+# Create virtual environment
+##############################
 workspace="workspace"
 mkdir ~/$workspace
 cd ~/$workspace
 
-#start virtualevn
+#start virtualenv
 virtualenv venv --no-site-packages --distribute
 source venv/bin/activate
 
