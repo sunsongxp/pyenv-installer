@@ -109,3 +109,11 @@ pip install BeautifulSoup
 # fabric for deployment, pytz handles timezone, xlwt render xls spreadsheet
 # South for migration
 pip install fabric pytz xlwt South
+
+#BeautifulSoup is for parsing html
+pip install BeautifulSoup
+
+# Other useful packages, django-geoip can convert ip address to address
+pip install django-geoip
+
+# psycopg2 is django PostgreSQL backend, html5lib can parse html5 file, html2text can convert html to markdown format
