@@ -26,7 +26,7 @@ sudo sh <<SCRIPT
     apt-get -y install ssh vim tmux tilda ack-grep ipython traceroute tsocks
 
     # Version Control System
-    apt-get -y install git git-cola subversion
+    apt-get -y install git subversion
 
     # For monitoring (sysstat is running as command "iostat")
     apt-get -y install htop iotop sysstat iptraf iftop
@@ -118,4 +118,4 @@ pip install django-geoip
 
 # psycopg2 is django PostgreSQL backend, html5lib can parse html5 file, html2text can convert html to markdown format
 
-pip install pep8 ipdb
+pip install pep8 ipdb django-extensions
