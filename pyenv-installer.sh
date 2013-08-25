@@ -23,7 +23,7 @@ sudo sh <<SCRIPT
 
 
     # Basic Tools
-    apt-get -y install ssh vim tmux tilda ack-grep ipython traceroute tsocks
+    apt-get -y install ssh vim tmux tilda ack-grep ipython traceroute tsocks swaks
 
     # Version Control System
     apt-get -y install git subversion
