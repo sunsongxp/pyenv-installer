@@ -7,7 +7,7 @@
 # This script is aimed at help building a python developing environment using Django, MySQL, redis, PostgreSQL. Heroku, Version control systems like git and svn, openvpn client, virtualenv and common libraries for python are also included. This script were tested under ubuntu 12.04.
 # Step 1: run "chmod +x pyenv-installer.sh"
 # Step 2: Change variable "workspace" below, which is folder name created under "~" and storing virtualenv files.
-# Step 3: run "./pyenv-installer.sh", this needs sudo privilege.
+# Step 3: run "./pyenv-installer.sh", this needs sudo privilege. (do not use sh to run this script, it has problem with python virtualenv)
 # Step 4: redis-server needs to be configured by hands, so read the script about it below. (I will improve it later.)
 # Step 5: go to the workspace directory, and run "source venv/bin/activate", then run python as you like.
 #
