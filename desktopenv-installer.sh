@@ -7,6 +7,7 @@
 # This script is used for installing necessary tools after new os has been setup. This script were tested under ubuntu 13.10.
 # Step 1: run "chmod +x pyenv-installer.sh"
 # Step 2: run "./pyenv-installer.sh", this needs sudo privilege. (do not use sh to run this script, it has problem with python virtualenv)
+# CAUTION: This script can run only once.
 #
 
 # Clear previous sudo permission
@@ -59,7 +60,8 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
 
 SCRIPT
 
-mkdir ~/workspace
+workspace="workspace"
+mkdir ~/$workspace
 
 # Install dotfiles
 cd ~
@@ -68,6 +70,7 @@ cd dotfiles
 ./install.sh
 
 # Install dnscrypt
+# TODO Dnscrypt packages haven't been decompressed.
 cd ~/workspace/libsodium-0.4.1
 ./configure
 make && make check && sudo make install
