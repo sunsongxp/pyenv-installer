@@ -124,4 +124,4 @@ pip install requests
 pip install rq
 
 # For Django Oscar
-django-oscar django-storages boto django-redis
+pip install django-oscar django-storages boto django-redis
