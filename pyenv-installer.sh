@@ -117,8 +117,8 @@ pip install BeautifulSoup
 pip install django-geoip
 
 # psycopg2 is django PostgreSQL backend, html5lib can parse html5 file, html2text can convert html to markdown format
-
-pip install pep8 ipdb pudb django-extensions django-debug-toolbar django-debug-toolbar-template-timings ipython
+# tabulate is used for printing dictionary in readable way. Reference: https://bitbucket.org/astanin/python-tabulate
+pip install pep8 ipdb pudb django-extensions django-debug-toolbar django-debug-toolbar-template-timings ipython tabulate
 
 pip install requests
 pip install rq
