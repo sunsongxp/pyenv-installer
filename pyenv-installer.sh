@@ -114,7 +114,7 @@ pip install fabric pytz xlwt South
 pip install BeautifulSoup
 
 # Other useful packages, django-geoip can convert ip address to address
-pip install django-geoip
+pip install django-geoip django-tastypie
 
 # psycopg2 is django PostgreSQL backend, html5lib can parse html5 file, html2text can convert html to markdown format
 # tabulate is used for printing dictionary in readable way. Reference: https://bitbucket.org/astanin/python-tabulate
@@ -125,3 +125,5 @@ pip install rq
 
 # For Django Oscar
 pip install django-oscar django-storages boto django-redis hiredis django-redis-sessions
+
+pip install python-geohash
