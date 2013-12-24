@@ -58,6 +58,7 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install axel rar unrar dmg2img tidy
     apt-get -y install smplayer unetbootin bleachbit easytag awesome boinc pgadmin3 bluefish gparted tomboy wireshark chromium-browser meld git-cola dia synaptic vlc gconf-editor
     apt-get -y install virtualbox-4.2
+    apt-get -y install kupfer
 
 SCRIPT
 
