@@ -47,7 +47,7 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
 114.80.201.200 staging\n' >> '/etc/hosts'
 
     # Add virtualbox repository to source.list
-    echo 'deb http://download.virtualbox.org/virtualbox/debian raring contrib non-free' >> /etc/apt/sources.list
+    echo 'deb http://download.virtualbox.org/virtualbox/debian saucy contrib non-free' >> /etc/apt/sources.list
     wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | apt-key add -
 
     # Update, You can Do it yourself before running this script.
@@ -57,8 +57,10 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install python-gpgme
     apt-get -y install axel rar unrar dmg2img tidy
     apt-get -y install smplayer unetbootin bleachbit easytag awesome boinc pgadmin3 bluefish gparted tomboy wireshark chromium-browser meld git-cola dia synaptic vlc gconf-editor network-manager-openvpn
-    apt-get -y install virtualbox-4.2
+    apt-get -y install virtualbox-4.3
     apt-get -y install kupfer
+    apt-get -y install obfsproxy
+    apt-get -y install sqlitebrowser
 
 SCRIPT
 
