@@ -127,3 +127,6 @@ pip install rq
 pip install django-oscar django-storages boto django-redis hiredis django-redis-sessions
 
 pip install python-geohash
+
+# https://pypi.python.org/pypi/pypiserver
+pip install pypiserver
