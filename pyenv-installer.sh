@@ -128,5 +128,11 @@ pip install django-oscar django-storages boto django-redis hiredis django-redis-
 
 pip install python-geohash
 
+
+# Two packages below are used for mirror pypi repository
 # https://pypi.python.org/pypi/pypiserver
 pip install pypiserver
+
+#mkdir pypi_mirror/data/
+#pep381run pypi_mirror/data/
+pip install pep381client
