@@ -61,6 +61,11 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install kupfer
     apt-get -y install obfsproxy
     apt-get -y install sqlitebrowser
+    apt-get -y install docky
+
+    add-apt-repository ppa:marlin-devs/marlin-daily
+    apt-get update
+    apt-get -y install marlin
 
 SCRIPT
 
