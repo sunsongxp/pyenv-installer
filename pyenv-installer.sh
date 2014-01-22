@@ -29,7 +29,7 @@ sudo sh <<SCRIPT
     apt-get -y install git subversion
 
     # For monitoring (sysstat is running as command "iostat")
-    apt-get -y install htop iotop sysstat iptraf iftop
+    apt-get -y install htop iotop sysstat iptraf iftop nmon
 
     # Source Building and Compiling
     apt-get -y install build-essential
