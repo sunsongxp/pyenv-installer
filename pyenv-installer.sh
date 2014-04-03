@@ -23,7 +23,7 @@ sudo sh <<SCRIPT
 
 
     # Basic Tools
-    apt-get -y install ssh openssh-server vim tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu
+    apt-get -y install ssh openssh-server vim tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu pwgen
 
     # Version Control System
     apt-get -y install git subversion
