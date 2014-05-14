@@ -24,27 +24,18 @@ sloppysun ALL=(ALL) NOPASSWD: /usr/bin/vim\n\
 sloppysun ALL=(ALL) NOPASSWD: /usr/local/bin/npm\n\
 sloppysun ALL=(ALL) NOPASSWD: /usr/bin/make\n' > /etc/sudoers.d/exemption
 
-    # set timeout for ssh connection
-    echo '\
-    ServerAliveInterval 999999' >> /etc/ssh/ssh_config
-
     # disable ubuntu crash report
     sed -i "s/enabled=1/enabled=0/g" '/etc/default/apport'
 
     # disable my dedicated graphic card for saving power
     # next line will make it effective at once.
     # And the content put in rc.local will assure this setting can be activated each time the computer start.
-    echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
-    sed -i '/^exit 0/ i \
-echo ON > /sys/kernel/debug/vgaswitcheroo/switch\n\
-echo IGD > /sys/kernel/debug/vgaswitcheroo/switch\n\
-echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
+    #echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+    #sed -i '/^exit 0/ i \
+#echo ON > /sys/kernel/debug/vgaswitcheroo/switch\n\
+#echo IGD > /sys/kernel/debug/vgaswitcheroo/switch\n\
+#echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
 
-    # add a number of dns records
-    echo '\n192.168.56.189 test\n\
-114.80.203.146 production\n\
-203.86.235.137 hk\n\
-114.80.201.200 staging\n' >> '/etc/hosts'
 
     # Add virtualbox repository to source.list
     echo 'deb http://download.virtualbox.org/virtualbox/debian saucy contrib non-free' >> /etc/apt/sources.list
@@ -64,6 +55,7 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install docky
     apt-get -y install silversearcher-ag
     apt-get -y install tzwatch
+    apt-get -y install kcachegrind
 
     add-apt-repository ppa:marlin-devs/marlin-daily
     apt-get update

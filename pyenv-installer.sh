@@ -39,6 +39,7 @@ sudo sh <<SCRIPT
     # build-dep means that install all dependencies for 'packagename' so that I can build it.
     apt-get -y build-dep python-mysqldb
     apt-get -y install sqlite3
+    apt-get -y mongodb-server
 
     # Install python-setuptools
     apt-get -y install python-setuptools
