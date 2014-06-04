@@ -16,10 +16,11 @@ cd ~/$workspace
 # Inatall Node.js
 git clone https://github.com/joyent/node.git
 cd node
-git checkout v0.10.24-release
+git checkout v0.10.28-release
 ./configure
 make
 sudo make install
 
 # Install socket.io Haraka ungit
 sudo npm install -g socket.io ungit Haraka express
+sudo npm install -g node-static
