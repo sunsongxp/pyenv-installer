@@ -24,3 +24,4 @@ sudo make install
 # Install socket.io Haraka ungit
 sudo npm install -g socket.io ungit Haraka express
 sudo npm install -g node-static
+sudo npm install -g forever

@@ -23,7 +23,7 @@ sudo sh <<SCRIPT
 
 
     # Basic Tools
-    apt-get -y install ssh openssh-server vim tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu pwgen tig
+    apt-get -y install ssh openssh-server tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu pwgen tig
 
     # Version Control System
     apt-get -y install git subversion
@@ -35,7 +35,7 @@ sudo sh <<SCRIPT
     apt-get -y install build-essential
 
     # Install databases
-    apt-get -y install postgresql postgresql-server-dev-9.1
+    apt-get -y install postgresql postgresql-server-dev-9.3
     # build-dep means that install all dependencies for 'packagename' so that I can build it.
     apt-get -y build-dep python-mysqldb
     apt-get -y install sqlite3
@@ -57,83 +57,3 @@ sudo sh <<SCRIPT
     apt-get -y install python-virtualenv
 
 SCRIPT
-
-redis_url="http://download.redis.io/redis-stable.tar.gz"
-redis_file_name="redis-stable.tar.gz"
-
-########################
-# Install redis-server
-########################
-wget $redis_url
-tar xvzf $redis_file_name
-cd redis-stable
-make
-make test
-sudo make install
-#Setup commands needed to be run as sudo
-cd utils
-sudo ./install_server.sh
-#Then use "service" to start redis-server
-
-
-##############################
-# Create virtual environment
-##############################
-workspace="workspace"
-mkdir ~/$workspace
-cd ~/$workspace
-
-#start virtualenv
-virtualenv venv --no-site-packages --distribute
-source venv/bin/activate
-
-#install python database client
-pip install Django psycopg2 dj-database-url
-pip install MySQL-python
-pip install redis
-
-#install RedisLive
-RedisLive_url="https://github.com/kumarnitin/RedisLive.git"
-pip install tornado python-dateutil argparse
-git clone $RedisLive_url
-
-# Install Gunicorn
-pip install gunicorn
-
-# Install numpy and matplotlib
-pip install numpy
-pip install matplotlib
-
-# BeautifulSoup is for parsing html
-pip install BeautifulSoup
-
-# fabric for deployment, pytz handles timezone, xlwt render xls spreadsheet
-# South for migration
-pip install fabric pytz xlwt South
-
-#BeautifulSoup is for parsing html
-pip install BeautifulSoup
-
-# Other useful packages, django-geoip can convert ip address to address
-pip install django-geoip django-tastypie
-
-# psycopg2 is django PostgreSQL backend, html5lib can parse html5 file, html2text can convert html to markdown format
-# tabulate is used for printing dictionary in readable way. Reference: https://bitbucket.org/astanin/python-tabulate
-pip install pep8 ipdb pudb django-extensions django-debug-toolbar django-debug-toolbar-template-timings ipython tabulate
-
-pip install requests
-pip install rq
-
-# For Django Oscar
-pip install django-oscar django-storages boto django-redis hiredis django-redis-sessions
-
-pip install python-geohash
-
-
-# Two packages below are used for mirror pypi repository
-# https://pypi.python.org/pypi/pypiserver
-pip install pypiserver
-
-#mkdir pypi_mirror/data/
-#pep381run pypi_mirror/data/
-pip install pep381client
