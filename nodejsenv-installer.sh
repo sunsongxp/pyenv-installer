@@ -9,7 +9,7 @@
 # Step 2: run "./nodejsenv-installer.sh", this needs sudo privilege. (do not use sh to run this script, it has problem with python virtualenv)
 #
 
-workspace="workspace"
+workspace="sourcecode"
 mkdir ~/$workspace
 cd ~/$workspace
 
@@ -22,6 +22,8 @@ make
 sudo make install
 
 # Install socket.io Haraka ungit
+sudo npm install -g node-gyp
 sudo npm install -g socket.io ungit Haraka express
 sudo npm install -g node-static
 sudo npm install -g forever
+sudo npm install -g gitbook
