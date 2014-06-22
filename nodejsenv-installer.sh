@@ -22,7 +22,7 @@ make
 sudo make install
 
 # Install socket.io Haraka ungit
-sudo npm install -g node-gyp
+sudo npm install -g node-gyp # Required by Haraka
 sudo npm install -g socket.io ungit Haraka express
 sudo npm install -g node-static
 sudo npm install -g forever
