@@ -47,6 +47,7 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install tzwatch
     apt-get -y install kcachegrind
     apt-get -y install cmus
+    apt-get -y imagemagick
 
 SCRIPT
 

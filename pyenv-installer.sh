@@ -56,4 +56,7 @@ sudo sh <<SCRIPT
     # Install virtualenv
     apt-get -y install python-virtualenv
 
+    # Install go-lang
+    apt-get -y install golang
+
 SCRIPT
