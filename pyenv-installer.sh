@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author: 孙松
-# Date: 08-01-2013
+# Date: 07-17-2014
 #
 # README
 # This script is aimed at help building a python developing environment using Django, MySQL, redis, PostgreSQL. Heroku, Version control systems like git and svn, openvpn client, virtualenv and common libraries for python are also included. This script were tested under ubuntu 12.04.
@@ -58,5 +58,10 @@ sudo sh <<SCRIPT
 
     # Install go-lang
     apt-get -y install golang
+
+    # Install Docker
+    apt-get install docker.io
+    ln -sf /usr/bin/docker.io /usr/local/bin/docker
+    sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
 
 SCRIPT
