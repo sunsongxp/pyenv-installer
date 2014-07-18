@@ -12,7 +12,7 @@ sudo apt-get install pepperflashplugin-nonfree
 sudo update-pepperflashplugin-nonfree --install
 
 # install VIM
-curl -L https://gist.githubusercontent.com/sunsongxp/1a9c1542cde5ef518483/raw/bc07018a7bf01553708eede794303dde49b7ed58/vim74_lua | sh
+curl -L https://gist.githubusercontent.com/sunsongxp/1a9c1542cde5ef518483/raw/d81cf459489ad1bb178a74aeaa3c06eb8a394203/vim74_lua | sh
 
 # install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
