@@ -60,8 +60,8 @@ sudo sh <<SCRIPT
     apt-get -y install golang
 
     # Install Docker
-    apt-get install docker.io
+    apt-get -y install docker.io
     ln -sf /usr/bin/docker.io /usr/local/bin/docker
-    sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
 
 SCRIPT
+sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
