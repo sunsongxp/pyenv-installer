@@ -27,3 +27,4 @@ sudo npm install -g socket.io ungit Haraka express
 sudo npm install -g node-static
 sudo npm install -g forever
 sudo npm install -g gitbook
+sudo npm install -g weinre
