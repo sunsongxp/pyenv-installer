@@ -50,6 +50,8 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install cmus
     apt-get -y install imagemagick
     apt-get -y install task
+    apt-get -y install docky
+    apt-get -y install kupfer
 
 SCRIPT
 
