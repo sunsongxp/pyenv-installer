@@ -26,7 +26,7 @@ sudo sh <<SCRIPT
     apt-get -y install ssh openssh-server tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu pwgen tig zsh
 
     # Version Control System
-    apt-get -y install git subversion
+    apt-get -y install git git-flow subversion
 
     # For monitoring (sysstat is running as command "iostat")
     apt-get -y install htop iotop sysstat iptraf iftop nmon
