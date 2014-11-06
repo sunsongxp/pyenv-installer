@@ -26,3 +26,7 @@ curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 
 # remove unnecessary sotfware
 wget -q -O - https://fixubuntu.com/fixubuntu.sh | bash
+
+sudo add-apt-repository ppa:saiarcot895/myppa
+sudo apt-get install apt-fast
+sudo apt-get install unity-tweak-tool
