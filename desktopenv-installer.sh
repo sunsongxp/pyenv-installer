@@ -54,6 +54,7 @@ echo OFF > /sys/kernel/debug/vgaswitcheroo/switch\n' '/etc/rc.local'
     apt-get -y install kupfer
 
     pip install youtube-dl
+    pip install flake8
 
 SCRIPT
 
