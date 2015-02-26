@@ -30,3 +30,5 @@ wget -q -O - https://fixubuntu.com/fixubuntu.sh | bash
 sudo add-apt-repository ppa:saiarcot895/myppa
 sudo apt-get install apt-fast
 sudo apt-get install unity-tweak-tool
+
+sudo apt-get remove update-manager # remove annoying notification

@@ -22,7 +22,7 @@ sloppysun ALL=(ALL) NOPASSWD: /usr/bin/wireshark\n\
 sloppysun ALL=(ALL) NOPASSWD: /usr/bin/vim\n\
 sloppysun ALL=(ALL) NOPASSWD: /usr/local/bin/npm\n\
 sloppysun ALL=(ALL) NOPASSWD: /usr/bin/make\n\
-sloppysun ALL=(ALL) NOPASSWD: /usr/local/bin/docker\n' > /etc/sudoers.d/exemption
+sloppysun ALL=(ALL) NOPASSWD: /usr/bin/docker\n' > /etc/sudoers.d/exemption
 
     # disable ubuntu crash report
     sed -i "s/enabled=1/enabled=0/g" '/etc/default/apport'

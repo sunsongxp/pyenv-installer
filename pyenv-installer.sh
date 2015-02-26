@@ -23,7 +23,7 @@ sudo sh <<SCRIPT
 
 
     # Basic Tools
-    apt-get -y install ssh openssh-server tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu pwgen tig zsh
+    apt-get -y install ssh openssh-server tmux tilda ack-grep ipython traceroute tsocks swaks curl ncdu pwgen tig zsh siege
 
     # Version Control System
     apt-get -y install git git-flow subversion
@@ -62,6 +62,9 @@ sudo sh <<SCRIPT
     # Install go-lang
     apt-get -y install golang
 
+    # Due to a bug in pip?, I need to reinstall pip this way:
+    easy_install pip
+
     # Install Docker
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
     sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
@@ -70,7 +73,8 @@ sudo sh <<SCRIPT
     apt-get install lxc-docker
     #ln -sf /usr/bin/docker.io /usr/local/bin/docker
 
-    pip install -U fig
+    pip install fig
+    pip install joe
 
 SCRIPT
 sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
