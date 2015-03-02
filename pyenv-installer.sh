@@ -31,6 +31,9 @@ sudo sh <<SCRIPT
     # For monitoring (sysstat is running as command "iostat")
     apt-get -y install htop iotop sysstat iptraf iftop nmon
 
+    # Sysbench
+    apt-get -y install sysbench
+
     # Install exuberant-ctags
     apt-get -y install exuberant-ctags
 
