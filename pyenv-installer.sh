@@ -69,15 +69,10 @@ sudo sh <<SCRIPT
     easy_install pip
 
     # Install Docker
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
-    sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
-    apt-get update
-    apt-get -y install docker.io
-    apt-get install lxc-docker
-    #ln -sf /usr/bin/docker.io /usr/local/bin/docker
+    curl -sSL https://get.docker.com/ | sh
 
     pip install fig
     pip install joe
+    pip install shadowsocks
 
 SCRIPT
-sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io

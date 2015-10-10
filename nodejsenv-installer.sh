@@ -9,22 +9,21 @@
 # Step 2: run "./nodejsenv-installer.sh", this needs sudo privilege. (do not use sh to run this script, it has problem with python virtualenv)
 #
 
-workspace="sourcecode"
-mkdir ~/$workspace
-cd ~/$workspace
+# Install nvm
+curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
 
-# Inatall Node.js
-git clone https://github.com/joyent/node.git
-cd node
-git checkout v0.10.28-release
-./configure
-make
-sudo make install
+# Install Node (I have problem running this command because it requires terminal restarted)
+nvm install 0.10
 
-# Install socket.io Haraka ungit
-sudo npm install -g node-gyp # Required by Haraka
-sudo npm install -g socket.io ungit Haraka express
-sudo npm install -g node-static
-sudo npm install -g forever
-sudo npm install -g gitbook
-sudo npm install -g weinre
+# Install useful software and libraries
+npm install -g node-gyp # Required by Haraka
+npm install -g socket.io ungit Haraka express
+npm install -g node-static
+npm install -g forever
+npm install -g gitbook
+npm install -g weinre
+
+# git-stats
+npm install -g git-stats-importer
+npm install -g git-stats
+wget -qO- https://raw.githubusercontent.com/IonicaBizau/git-stats/master/scripts/init-git-post-commit | bash
