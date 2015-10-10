@@ -75,4 +75,6 @@ sudo sh <<SCRIPT
     pip install joe
     pip install shadowsocks
 
+    apt-get -y install redis-tools
+
 SCRIPT
